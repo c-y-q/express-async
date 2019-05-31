@@ -1,5 +1,4 @@
-const carctrlModel = require('../mongodb/models/carctrl');
-const moment = require('moment');
+const carctrlModel = model.carctrl;
 exports.addData = async (firstModel) => {
     const params = {
         deviceSN: firstModel.deviceSN || '',

@@ -1,5 +1,4 @@
-const deviceInfoModel = require('../mongodb/models/deviceInfo');
-
+const deviceInfoModel = model.deviceInfo;
 exports.addData = async (param) => {
     const model = {
         deviceSN: param.deviceSN,

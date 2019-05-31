@@ -7,8 +7,11 @@ var logger = require('morgan');
 var config = require('./config/config');
 var routers = require('./routes/route');
 var bodyParser = require('body-parser');
+// global.verifyParam = require('express-verify');
+
 require('./middlewares/catcherr');
 require('body-parser-xml')(bodyParser);
+require('./common/global');
 
 var app = express();
 app.use(logger('dev'));
@@ -38,8 +41,11 @@ app.use(bodyParser.xml({
     explicitArray: false // Only put nodes in array if >1
   }
 }));
+
+
 //regist all routers
 routers(app);
+
 // catch 404 and forward to error handler
 app.use(function (res, req, next) {
   var err = new Error()

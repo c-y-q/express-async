@@ -1,6 +1,4 @@
-const clothctlModel = require('../mongodb/models/clothctl');
-const moment = require('moment');
-
+const clothctlModel = model.clothctl;
 exports.find = async (param) => {
     const { lostTime, carNumber, carStatus } = param;
     let pageSize = parseInt(param.pageSize || 10);
