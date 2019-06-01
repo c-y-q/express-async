@@ -3,7 +3,7 @@ const path = require('path');
 global.loaddir = require('../tool/loaddir');
 global.model = require('../mongodb/model');
 global.moment = require('moment');
-global.httpStatus = loaddir('httpStatus');
+
 global.certs = {
 	public: null,
 	private: null

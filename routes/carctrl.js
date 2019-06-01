@@ -14,7 +14,7 @@ router.post('/delCarInfo', async (req, res, next) => {
 	res.json({ status: 200, msg: 'ok' })
 })
 
-router.post('/addCarInfo', veryfify.addCarInfo,async (req, res, next) => {
+router.post('/addCarInfo', async (req, res, next) => {
 	console.log(18,req.parameter);
 	// await carctrlService.addData(req.body);
 	res.json({ status: 200, msg: 'ok' })
