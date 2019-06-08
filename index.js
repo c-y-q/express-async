@@ -7,12 +7,9 @@ var logger = require('morgan');
 var config = require('./config/config');
 var routers = require('./routes/route');
 var bodyParser = require('body-parser');
-// global.verifyParam = require('express-verify');
-
 require('./middlewares/catcherr');
 require('body-parser-xml')(bodyParser);
 require('./common/global');
-
 var app = express();
 app.use(logger('dev'));
 app.use(cookieParser());
@@ -41,8 +38,6 @@ app.use(bodyParser.xml({
     explicitArray: false // Only put nodes in array if >1
   }
 }));
-
-
 //regist all routers
 routers(app);
 
@@ -60,6 +55,7 @@ app.use(function (err, req, res, next) {
     router: req.url,
     error: err.stack
   });
+  console.error(req.url+'\n'+err.stack);
 });
 
 module.exports = app;

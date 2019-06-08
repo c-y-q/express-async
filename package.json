@@ -18,11 +18,15 @@
     "http-errors": "~1.6.2",
     "ioredis": "^4.9.5",
     "jsonwebtoken": "^8.5.1",
+    "mockjs": "^1.0.1-beta3",
     "moment": "^2.24.0",
     "mongoose": "^5.5.11",
     "morgan": "~1.9.0",
     "nodemon": "^1.19.0",
     "redis": "^2.8.0",
     "stompit": "^0.26.0"
+  },
+  "devDependencies": {
+    "memeye": "^1.0.3"
   }
 }

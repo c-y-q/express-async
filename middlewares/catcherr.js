@@ -13,6 +13,6 @@ const catchError = Object.defineProperty(Layer.prototype, 'handle', {
                     .then(() => fn(req, res, next))
                     .catch(next);
         }
-    },
+    }
 });
 module.exports = catchError;
